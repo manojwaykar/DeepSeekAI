@@ -78,7 +78,7 @@ const PromptBox = ({isLoading, setIsLoading}) => {
                         setSelectedChats((prev)=>{
                             const updatedMessages = [
                                 ...prev.messages.slice(0, -1),
-                                assistentMessage
+                                {...assistentMessage}
                             ]
                             return { ...prev, messages: updatedMessages}
                         })
