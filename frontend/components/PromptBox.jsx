@@ -47,7 +47,7 @@ const PromptBox = ({isLoading, setIsLoading}) => {
             }))
 
             const token = await getToken();
-            const { data } = await axios.post('http://localhost:4002/api/v1/deepseekai/chats/prompt', {
+            const { data } = await axios.post('https://deepseekai-backend-vwcv.onrender.com/api/v1/deepseekai/chats/prompt', {
                 chatId : selectedChats._id,
                 content : prompt,
             }, {

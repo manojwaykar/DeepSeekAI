@@ -22,7 +22,7 @@ const ChatLabel = ({openMenu, setOpenMenu, id, name}) => {
             const token = await getToken();
 
             if(!newName) return;
-            const { data } = await axios.put('http://localhost:4002/api/v1/deepseekai/chats' , {
+            const { data } = await axios.put('https://deepseekai-backend-vwcv.onrender.com/api/v1/deepseekai/chats' , {
                 chatId : id,
                 name : newName
             }, {headers:{
@@ -45,7 +45,7 @@ const ChatLabel = ({openMenu, setOpenMenu, id, name}) => {
             const confirm = window.confirm("Are you sure you want to delete this chat?");
             const token = await getToken();
             if(!confirm) return;
-            const { data } = await axios.delete('http://localhost:4002/api/v1/deepseekai/chats' , 
+            const { data } = await axios.delete('https://deepseekai-backend-vwcv.onrender.com/api/v1/deepseekai/chats' , 
                 {
                     headers:{
                         Authorization : `Bearer ${token}`

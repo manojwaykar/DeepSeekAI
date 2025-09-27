@@ -14,7 +14,7 @@ export const useAppContext = ()=>{
 export const AppContextProvider= ({children})=>{
     const {user} = useUser();
     const { getToken } = useAuth();
-    const API = "http://localhost:4002/api/v1/deepseekai"
+    const API = "https://deepseekai-backend-vwcv.onrender.com/api/v1/deepseekai"
 
     const [chats, setChats]= useState([]);
     const [selectedChats, setSelectedChats] = useState(null);
