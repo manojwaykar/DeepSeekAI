@@ -57,7 +57,7 @@ const PromptBox = ({isLoading, setIsLoading}) => {
             })
 
             if(data.success){
-                setChats((prevChats)=>prevChats.map((chat)=>chat._id === selectedChats._id ? {...chat, messages: [...chat.messages, data.chat]} : chat))
+                setChats((prevChats)=>prevChats.map((chat)=>chat._id === selectedChats._id ? {...chat, messages: [...chat.messages, data.data]} : chat))
 
                 const message = data.chat.content;
                 const messageTokens = message.split(" ");
