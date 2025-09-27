@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader div:nth-child(2) {
+ animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3) {
+ animation-delay: 0.4s;
+}
+
+code {
+    white-space: pre-wrap !important;
+}
+
+pre{
+    border-radius: 10px !important;
+}
+
+
+@layer components {
+  pre[class*="language-"] {
+    border-radius: 10px !important;
+  }
+
+  code[class*="language-"] {
+    white-space: pre-wrap !important;
+  }
+}
