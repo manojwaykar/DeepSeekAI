@@ -10,7 +10,7 @@ function Dashboard() {
   useEffect(() => {
     const callEnsureUser = async () => {
       const token = await getToken();
-      await fetch("http://localhost:4002/api/v1/user/ensure-user", {
+      await fetch("https://deepseekai-backend-vwcv.onrender.com/api/v1/user/ensure-user", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
