@@ -59,7 +59,7 @@ export const sendPrompt = async (req, res) => {
 
     await chat.save();
 
-    return res.status(200).json({ success: true, data: aiMessage });
+    return res.status(200).json({ success: true, chat });
   } catch (error) {
     console.error("SendPrompt Error:", error);
     return res.status(500).json({ success: false, error: "Something went wrong!" });
