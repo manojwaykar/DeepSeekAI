@@ -46,7 +46,7 @@ export const sendPrompt = async (req, res) => {
     chat.messages.push(userMessage);
 
     const completion = await openai.chat.completions.create({
-      model: "deepseek/deepseek-chat-v3.1:free",
+      model: "deepseek/deepseek-r1-0528-qwen3-8b:free",
       messages: [{ role: "user", content }],
     });
 
