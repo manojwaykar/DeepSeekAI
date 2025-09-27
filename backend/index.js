@@ -25,7 +25,7 @@ mongoose.connect(MONGO_URL,  {
 })
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://deepseekai-frontend-772r.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
