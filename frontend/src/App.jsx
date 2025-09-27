@@ -49,7 +49,7 @@ function App() {
             <p className="text-sm mt-2">How can I help you today?</p>
           </>) : 
           (
-          <div ref={containerRef} className="relative flex flex-col items-center justify-center w-full mt-20 max-h-screen overflow-y-auto">
+          <div ref={containerRef} className="flex-1 w-full overflow-y-auto px-4 mt-16 mb-4">
             <p className="fixed top-8 border border-transparent hover:border-gray-500/50 py-1 px-2 rounded-lg font-semibold mb-6">{selectedChats.name}</p>
             {messages.map((msg, index)=>(
               <Message key={index} role={msg.role} content={msg.content}/>
